@@ -1,0 +1,30 @@
+<div class="sl-main">
+  <label>Room Name</label>
+  <input placeholder="Room Name" />
+  <div class="sl-chatbody">
+    <div class="sl-recentchats">
+      <div class="sl-chatheads">
+        <h5>RecentChat</h5>
+      </div>
+    </div>
+    <div class="sl-receivedmessage">
+      <div class="sl-messagehistory">
+        <h5>Messages are displayed here</h5>
+        <div *ngFor="let message of messages">
+          <h3>{{message}}</h3>
+        </div>
+      </div>
+      <div class="sl-sendmessage">
+        <div>
+          <input placeholder="Send Message"/>
+          <button>Send</button>
+        </div>
+      </div>
+    </div>
+    <div class="sl-activeusers">
+      <div class="sl-userslist">
+        <h5>Active users list</h5>
+      </div>
+    </div>
+  </div>
+</div>

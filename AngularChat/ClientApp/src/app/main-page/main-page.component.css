@@ -1,0 +1,57 @@
+.sl-main {
+  border: 1px solid #c4c4c4;
+  clear: both;
+  height: 90vh;
+}
+
+.sl-chatbody {
+  background: #f8f8f8 none repeat scroll 0 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sl-recentchats {
+  height: 90vh;
+  overflow-y: scroll;
+  overflow: hidden;
+  width: 20%;
+  float: left;
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.sl-chatheads {
+  overflow: hidden;
+  clear: both;
+}
+
+.sl-receivedmessage {
+  height: 90vh;
+  width: 50%;
+  float: left;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.sl-messagehistory {
+  overflow-y: scroll;
+  overflow: hidden;
+  height: 80vh;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.sl-sendmessage{
+  height: 10vh;
+}
+
+.sl-activeusers {
+  height: 90vh;
+  overflow-y: scroll;
+  overflow: hidden;
+  width:20%;
+  float: left;
+  border-left: 1px solid #c4c4c4;
+}
+
+.sl-userslist {
+  padding: 0 0 0 15px;
+}

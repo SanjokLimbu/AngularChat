@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularChat", "AngularChat\AngularChat.csproj", "{CCB06791-45A9-4359-A143-338334EFEBEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCB06791-45A9-4359-A143-338334EFEBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB06791-45A9-4359-A143-338334EFEBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB06791-45A9-4359-A143-338334EFEBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB06791-45A9-4359-A143-338334EFEBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C6D586B-D0B1-4650-A9CA-88B4681F86DC}
+	EndGlobalSection
+EndGlobal

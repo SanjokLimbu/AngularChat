@@ -1,0 +1,67 @@
+<div>
+  <div style="margin: 0; width: 100%; text-align: center">
+    <button (click)="show(1)">Login</button> <button (click)="show(2)">Register</button>
+  </div>
+
+  <!--For Logging in-->
+  <div class="sl-modal" *ngIf="showModal === 1">
+    <div class="sl-modal-content">
+      <div class="sl-modal-header" >
+        <h4>Login</h4>
+        <span class="material-icons-outlined" (click)="close()">
+          close
+        </span>
+      </div>
+      <form #LoginForm="ngForm" (ngSubmit)="Login(userModel)">
+        <div class="sl-modal-body">
+          <div style="text-align: center">
+            <div>
+              <label for="userName">Username</label>
+              <input required id="userName" #userName="ngModel" name="userName" [(ngModel)]="userModel.userName" type="text" placeholder="Username" />
+            </div>
+            <br />
+            <div>
+              <label for="passWord">Password</label>
+              <input required id="passWord" #passWord="ngModel" name="passWord" [(ngModel)]="userModel.passWord" placeholder="Password" />
+            </div>
+          </div>
+          <div>{{error}}</div>
+        </div>
+        <div class="sl-modal-footer">
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--For Registration-->
+  <div class="sl-modal" *ngIf="showModal === 2">
+    <div class="sl-modal-content">
+      <div class="sl-modal-header">
+        <h4>Register</h4>
+        <span class="material-icons-outlined" (click)="close()">
+          close
+        </span>
+      </div>
+      <form #Registration="ngForm" (ngSubmit)="Register(userModel)">
+        <div class="sl-modal-body">
+          <div style="text-align: center">
+            <div>
+              <label for="userName">Username</label>
+              <input required id="userName" #userName="ngModel" name="userName" [(ngModel)]="userModel.userName" placeholder="Username" />
+              <div>{{error}}</div>
+            </div>
+            <br />
+            <div>
+              <label for="passWord">Password</label>
+              <input required id="passWord" #passWord="ngModel" name="passWord" [(ngModel)]="userModel.passWord" placeholder="Password" />
+            </div>
+          </div>
+        </div>
+        <div class="sl-modal-footer">
+          <button>Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

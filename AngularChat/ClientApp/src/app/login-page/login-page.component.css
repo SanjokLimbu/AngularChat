@@ -1,0 +1,58 @@
+button {
+  padding: 15px 30px;
+  background-color: blue;
+  border: 0px;
+  font-size: 14px;
+  border-radius: 6px;
+  color: aliceblue;
+  font-family: 'poppins', sans-serif;
+  cursor: pointer;
+}
+
+.sl-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sl-modal-content {
+  background: aliceblue;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sl-modal-header {
+  padding: 20px;
+  background: deepskyblue;
+  color: white;
+  position: relative;
+}
+
+.sl-modal-header h4{
+    margin: 0;
+}
+
+.sl-modal-header .material-icons-outlined{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+  .sl-modal-body {
+    padding: 20px;
+    min-height: 200px;
+  }
+.sl-modal-footer{
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+}
+
+.sl-modal-footer button{
+    margin-left: 20px;
+    margin-right: 0;
+
+}
