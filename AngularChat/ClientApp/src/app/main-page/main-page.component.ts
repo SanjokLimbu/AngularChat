@@ -1,6 +1,4 @@
-import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
-import { HubConnection } from '@aspnet/signalr';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -11,18 +9,14 @@ import { SharedService } from '../shared.service';
 export class MainPageComponent implements OnInit {
 
   public messages = [];
-  public readonly URL = "https://localhost:44333/chathub";
-  returnmessage: string;
 
-  constructor(public service: SharedService) {
-  }
+  constructor(public service: SharedService) {}
 
   ngOnInit() {
     this.DisplayMessage();
   }
 
   public DisplayMessage() {
-    //let messages: string[];
-    this.messages.push(this.service.JoinMessage());
+    this.service.JoinMessage().subscribe((data) => this.messages.push(data));
   }
 }
