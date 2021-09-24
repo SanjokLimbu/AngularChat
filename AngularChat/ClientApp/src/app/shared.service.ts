@@ -29,6 +29,8 @@ export class SharedService {
       .catch(err => console.log(err));
   }
 
+  //Hub Invocation methods
+
   RegisterUser(UserModel: User): Observable<User> {
     return this.http.post<User>(this.URL + "Account/RegisterUser", UserModel);
   }
@@ -40,10 +42,17 @@ export class SharedService {
     return this.http.post<User>(this.URL + "Account/LoginUser", UserModel);
   }
 
+  SendMessage(textInput: string) {
+    this.hubConnection.invoke("SendMessage", textInput);
+  }
+
+  //Hub Receive Methods
+
   JoinMessage(): Observable<string> {
     this.hubConnection.on("ReceiveMessage", (messages) => {
       this.readMessage.next(messages);
     });
     return this.readMessage.asObservable();
   }
+  
 }

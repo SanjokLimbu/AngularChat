@@ -55,3 +55,10 @@
 .sl-userslist {
   padding: 0 0 0 15px;
 }
+
+.sl-datetime {
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 0;
+}

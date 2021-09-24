@@ -12,12 +12,13 @@
         <h5>Messages are displayed here</h5>
         <div *ngFor="let message of messages">
           <p>{{message}}</p>
+          <span class="sl-datetime">{{dateTime}}</span>
         </div>
       </div>
       <div class="sl-sendmessage">
         <div>
-          <input placeholder="Send Message"/>
-          <button>Send</button>
+          <input #textInput placeholder="Send Message"/>
+          <button (click)="Send(textInput.value)">Send</button>
         </div>
       </div>
     </div>

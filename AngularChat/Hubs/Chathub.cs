@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using System;
 using System.Threading.Tasks;
 
 namespace AngularChat.Hubs
@@ -18,7 +17,11 @@ namespace AngularChat.Hubs
             //await Groups.AddToGroupAsync(Context.ConnectionId, _globalRoom);
             //await Clients.Group(_globalRoom).SendAsync("ReceiveMessage", $"{_botUser} : Welcome {message}");
             await Clients.All.SendAsync("ReceiveMessage", $"{_botUser} : Welcome {message}");
-            //await Clients.All.SendAsync("ReceiveMessage", $"{_botUser} : Welcome {message}");
+        }
+
+        public async Task SendMessage(string message)
+        {
+            await Clients.All.SendAsync("ReceiveMessage", message);
         }
     }
 }
